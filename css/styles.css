@@ -1,0 +1,103 @@
+ /* Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #FFFFFF;
+  color: #333;
+  line-height: 1.6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header Styles */
+.site-header {
+  @apply sticky top-0 bg-white shadow-md z-50;
+}
+
+.site-title {
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.nav-list {
+  @apply flex gap-8 justify-center;
+}
+
+.nav-list a {
+  @apply text-gray-700 font-medium text-lg transition-colors duration-300;
+}
+
+.nav-list a:hover,
+.nav-list a[aria-current="page"] {
+  @apply text-green-500 underline;
+}
+
+/* Hero Section */
+.hero {
+  @apply relative bg-cover bg-center bg-no-repeat text-white;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  @apply absolute inset-0 bg-black bg-opacity-50;
+  z-index: 0;
+}
+
+.hero-content {
+  @apply relative z-10 max-w-3xl px-4;
+}
+
+.hero h2 {
+  @apply text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg;
+}
+
+.hero p {
+  @apply text-xl md:text-2xl drop-shadow-md;
+}
+
+/* Card Styles */
+.card {
+  @apply bg-white rounded-lg shadow-md p-6 transition-transform transform hover:scale-105;
+}
+
+/* Mini green box for specific cards */
+.mini-green-box {
+  @apply bg-[#BBD8A3] rounded-md p-3 inline-block text-gray-800 font-semibold;
+}
+
+/* Footer Styles */
+.site-footer {
+  @apply bg-green-700 text-white text-center py-4 mt-auto shadow-inner;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-list {
+    @apply flex-col gap-4;
+  }
+
+  .hero h2 {
+    @apply text-3xl;
+  }
+
+  .hero p {
+    @apply text-lg;
+  }
+}
