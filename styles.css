@@ -1,0 +1,162 @@
+/* Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #BF9264;
+  color: #333;
+  line-height: 1.6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1; /* This makes the container take up the remaining space */
+  max-width: 1;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header Styles */
+.site-header {
+  background-color: #BF9264;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.site-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 20px;
+}
+
+.nav-list a:hover,
+.nav-list a[aria-current="page"] {
+  color: #a3e635;
+  text-decoration: underline;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add this line for box shadow */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: #e0f2f1;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  width: 100%; /* Ensure the hero section takes the full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.hero h2 {
+  color: #276749;
+  margin: 0 auto; /* Center the h2 horizontally */
+  font-weight: 700;
+  border-bottom: 2px solid #a3e635;
+  width: 100%; /* Ensure the h2 takes the full width of the container */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Main Content Styles */
+main {
+  padding: 2rem 0;
+}
+
+/* Section Styles */
+section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 0; /* Change padding to only top and bottom */
+  border-bottom: 1px solid #ddd; /* Add a bottom border for separation */
+  transition: none; /* Remove transition for box-shadow */
+}
+
+section:hover {
+  box-shadow: none; /* Remove box-shadow on hover */
+}
+
+h2 {
+  color: #276749;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border-bottom: 2px solid #a3e635;
+  padding-bottom: 0.3rem;
+}
+
+/* Lists */
+ul {
+  padding-left: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.6rem;
+}
+
+/* Articles in examples section */
+.example {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-left: 4px solid #a3e635;
+  background: #e6ffdc;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #2f855a;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+  margin-top: auto; /* Ensure the footer stays at the bottom */
+}
+
+/* Accessibility and Responsive */
+a:focus,
+button:focus {
+  outline: 3px solid #a3e635;
+  outline-offset: 2px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
